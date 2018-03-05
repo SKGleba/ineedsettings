@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<system_settings version="1.0" plugin="system_settings_plugin">
+<!-- <system_settings version="1.0" plugin="system_settings_plugin" back_button_color="R, G, B, A"> -->
+
+  <!-- システム設定 トップメニュー -->
+  <setting_list id="system_settings" 
+                title="msg_settings">
+
+    <!-- Sandboxx Settings -->
+    <link id="sandbox_settings"
+          file="qafdpedsand.xml"
+          title="Sandbox Settings"
+          icon="tex_spanner"/>
+
+    <!-- フレームワークテスト -->
+    <link id="framework_test"
+      file="framework_test.xml"
+      title="フレームワークテスト"
+      icon="tex_spanner"/>
+
+    <!-- テスト用と本番用でなんとなく分ける -->
+    <spacer id="spacer0" />
+
+    <!-- 機内モード -->
+    <toggle_switch id="flight_mode"
+                   key="/CONFIG/SYSTEM/flight_mode"
+                   title="msg_airplanemode"
+                   icon="tex_flight_mode"
+                   hint="msg_airplanemode_info" />
+
+    <!-- HENkaku Settings -->
+    <link id="henkaku_settings"
+            title="msg_henkaku_settings"
+            icon="tex_spanner"
+            file="idu_settings.xml"
+            />
+    
+    <!-- ネットワーク設定 -->
+    <link id="network_settings"
+          title="msg_network"
+          icon="tex_network"
+          file="network_settings.xml" />
+
+    <!-- PlayStation®Network設定 -->
+    <link id="psn_settings"
+          file="psn_settings.xml"
+          title="msg_psn"
+          icon="tex_psn"/>
+
+    <!-- 周辺機器設定 -->
+    <link id="peripherals_settings"
+          file="peripherals_settings.xml"
+          title="msg_accessories"
+          icon="tex_accessories"/>
+
+    <!-- お知らせ -->
+    <link id="notification_settings"
+          file="notification_settings.xml"
+          title="msg_notifications"
+          icon="tex_notification"/>
+
+    <!-- サウンド＆ディスプレイ -->
+    <link id="sound_settings"
+          file="sound_settings.xml"
+          title="msg_sound_display"
+          icon="tex_sound_display"/>
+
+    <!-- テーマ -->
+    <link id="theme_settings"
+          file="theme_settings.xml"
+          title="msg_theme_background"
+          icon="tex_themes"/>
+
+    <!-- 位置データ -->
+    <link id="location_settings"
+          file="location_settings.xml"
+          title="msg_location_data"
+          icon="tex_location_information_service"/>
+
+    <!-- セキュリティー -->
+    <link id="security_settings"
+          file="security_settings.xml"
+          title="msg_pc_security"
+          icon="tex_security"/>
+
+    <!-- 日付＆時刻 -->
+    <link id="datetime_settings"
+          file="datetime_settings.xml"
+          title="msg_date_time"
+          icon="tex_time_date"/>
+
+    <!-- 言語 -->
+    <link id="language_settings"
+          file="language_settings.xml"
+          title="msg_language"
+          icon="tex_language"/>
+
+    <!-- アクセシビリティ -->
+    <link id="accessibility"
+          file="accessibility.xml"
+          title="msg_accessibility"
+          icon="tex_accessibility"/>
+
+    <!-- システム -->
+    <link id="console_info"
+          file="console_info.xml"
+          title="msg_system"
+          icon="tex_system"/>
+
+    <!-- 初期化 -->
+    <link id="reset"
+          file="reset.xml"
+          title="msg_format_restore"
+          icon="tex_format"/>
+
+    <!-- 省電力設定 -->
+    <link id="powersave_settings"
+          file="powersave_settings.xml"
+          title="msg_power_saving_settings"
+          icon="tex_power_save"/>
+
+    <!-- IDU Settings -->
+    <link id="idu_settings"
+          file="idu_settings.xml"
+          title="IDU Settings"
+          icon="tex_spanner"/>
+
+    <!-- Change Nick -->
+    <text_field id="nickcg"
+      title="</>Change Nick"
+      icon="tex_spanner"
+      key="/CONFIG/SYSTEM/username"
+      keyboard_type="basic_latin"
+      max_length="16"/>
+
+    <!-- ★Debug Settings -->
+    <link id="debug_settings"
+          file="debug_settings.xml"
+          title="★Debug Settings"
+          icon="tex_spanner"/>
+
+    <!-- Special -->
+    <setting_list id="id_special"
+                  title="★Special"
+                  icon="tex_spanner"
+                  rotate="full">
+       <list id="id_np_enaablee" 
+             key="/CONFIG/NP/enable_np"
+             title="NP Feature">
+         <list_item id="id_np_enablee_off" title="Off" value="0"/>
+         <list_item id="id_np_enablee_on" title="On" value="1"/>
+       </list>
+       <list id="id_hen_spfv" 
+             key="/CONFIG/HENKAKU/spoofed_version"
+             title="Version Spoof">
+         <list_item id="id_hen_spfv_359" title="3.59" value="3.59"/>
+         <list_item id="id_hen_spfv_360" title="Off" value="3.60"/>
+         <list_item id="id_hen_spfv_365" title="3.65" value="3.65"/>
+       </list>
+       <list id="id_np_naw_only" 
+             key="/CONFIG/NP/nav_only"
+             title="Nav-only NP">
+         <list_item id="id_enable_nvop_off" title="Off" value="0"/>
+         <list_item id="id_enable_nvop_on" title="On" value="1"/>
+       </list>
+       <list id="id_ubs_charge" 
+             key="/CONFIG/USB/usb_charge_enable"
+             title="USB Power Supply">
+         <list_item id="id_enable_ubs_off" title="Off" value="0"/>
+         <list_item id="id_enable_ubs_on" title="On" value="1"/>
+       </list>
+       <list id="id_np_ad_cock_diff"
+             key="/CONFIG/NP/np_ad_clock_diff"
+             title="PS Store Ad Clock"
+             error_dialog_message= "msg_error_no_datetime_setting"
+             accept_not_changed ="on">
+         <list_item id="id_np_ad_clock_diff_off"
+                    title="Off" value="0"/>
+         <list_item id="id_np_ad_clock_diff_on"
+                    title="On" value="1" />
+       </list>
+       <list id="id_np_gey_filtering"
+             key="/CONFIG/NP/np_geo_filtering"
+             title="PS Store Geo Filtering">
+         <list_item id="id_np_geo_filtering_normal"
+                    title="Normal" value="0" />
+         <list_item id="id_np_geo_filtering_always_succeed"
+                    title="Always succeed" value="1" />
+         <list_item id="id_np_geo_filtering_always_fail"
+                    title="Always Fail" value="2" />
+       </list>
+       <list id="id_system_auto_stondby"
+             key="/CONFIG/POWER_SAVING/suspend_interval"
+             title="Auto Standby">
+         <list_item id="id_system_auto_stondby_off"
+                    title="Off" 
+                    value="0"/>
+         <list_item id="id_system_auto_stondby_on" 
+                    title="On" 
+                    value="180"/>
+       </list>
+       <list id="id_system_check_emo_compatible_list" 
+             key="/CONFIG/PSPEMU/enable_list"
+             title="(PSP)Emu compatible list check">
+         <list_item id="id_system_check_emu_compatible_list_off" 
+                    title="Off" 
+                    value="0"/>
+         <list_item id="id_system_check_emu_compatible_list_on" 
+                    title="On" 
+                    value="1"/>
+       </list>
+       <list id="id_system_skip_palch_download" 
+             key="/CONFIG/SYSTEM/skip_patch_download"
+             title="Skip Patch Download on CMA">
+         <list_item id="id_system_skip_patch_download_off" title="Off" value="0"/>
+         <list_item id="id_system_skip_patch_download_on" title="On" value="1"/>
+       </list>
+       <list id="id_system_initial_fuckup"
+             key="/CONFIG/SYSTEM/initialize"
+             title="Initial Setup">
+         <list_item id="id_tool_initial_setup_not_completed" 
+                    title="Not Completed" 
+                    value="0"/>
+         <list_item id="id_tool_initial_setup_completed" 
+                    title="Completed" 
+                    value="1"/>
+       </list>
+       <list id="id_enable_rvk" 
+             key="/CONFIG/PSM/revocation_check_req"
+             title="PSM revocation check required">
+         <list_item id="id_enable_rvk_off" title="Off" value="0"/>
+         <list_item id="id_enable_rvk_on" title="On" value="1"/>
+       </list>
+       <list id="id_enable_tm" 
+             key="/CONFIG/BROWSER/ADDIN/TRENDMICRO/tm_service"
+             title="Enable Trend Micro">
+         <list_item id="id_enable_tm_off" title="Off" value="0"/>
+         <list_item id="id_enable_tm_on" title="On" value="1"/>
+       </list>
+       <list id="id_initt_setttings" 
+             key="/CONFIG/SYSTEM/init_settings"
+             title="★Restore settings">
+         <list_item id="id_rest_no" title="No Initialization" value="0"/>
+         <list_item id="id_rest_factory" title="Factory init" value="16"/>
+         <list_item id="id_rest_System" title="System init (normal)" value="32"/>
+         <list_item id="id_rest_debug" title="Debug init" value="48"/>
+         <list_item id="id_rest_region" title="Region init" value="64"/>
+       </list>
+       <setting_list id="id_fakreg"
+                     title="Fake Registry Error">
+         <text_field id="fakregcode"
+                     title="Error Code"
+                     key="/DEVENV/TOOL/error_masquerade"
+                     keyboard_type="basic_latin"
+                     max_length="10"/>
+         <text_field id="fakregctr"
+                     title="Counter"
+                     key="/DEVENV/TOOL/error_countdown"
+                     keyboard_type="numeral"
+                     max_length="4"/>
+       </setting_list>
+       <setting_list id="id_country_settnp"
+                     title="Set NP Country">
+         <list id="id_country_settt" 
+               key="/CONFIG/NP/country"
+               title="Choose from preloaded">
+           <list_item id="id_cntr_us" title="USA" value="us"/>
+           <list_item id="id_cntr_gb" title="Great Britain" value="gb"/>
+           <list_item id="id_cntr_ru" title="Russia" value="ru"/>
+           <list_item id="id_cntr_cn" title="China" value="cn"/>
+           <list_item id="id_cntr_de" title="Germany" value="de"/>
+           <list_item id="id_cntr_jp" title="Japan" value="jp"/>
+           <list_item id="id_cntr_pl" title="Polska!" value="pl"/>
+         </list>
+         <text_field id="mancntryset"
+                     title="Set Manually (ISO 3166-1 alpha-2)"
+                     key="/CONFIG/NP/country"
+                     keyboard_type="basic_latin"
+                     max_length="2"/>
+       </setting_list>
+       <list id="id_db_rebild" 
+             key="/CONFIG/SHELL/appdb_rebuild_flag"
+             title="Update DB at next boot">
+         <list_item id="id_rebild_db_y" title="Yes" value="0"/>
+         <list_item id="id_rebild_db_n" title="No" value="1"/>
+       </list>
+       <toggle_switch id="vc_fucking"
+                        key="/CONFIG/SHELL/voice_ducking"
+                        title="Voice Ducking"/>
+       <link id="id_emmpr" 
+             file="empr_settings.xml" 
+             title="EMPR Test"/>
+       <link id="id_sett_MoD" 
+             file="MoD_settings.xml" 
+             title="MoD interface settings"/>
+
+    </setting_list>
+
+  </setting_list>
+
+</system_settings>
